@@ -1,21 +1,22 @@
-weight, unit = input().split()
-weight = float(weight)
+data = input().strip()      # 例如 "10kg" 或 "10pd"
+weight = float(data[:-2])   # 数字部分
+unit = data[-2:]            # 单位部分
 
 if unit == "kg":
     pounds = weight * 2.2046
-    print(f"{weight:.3f} kg = {pounds:.3f} pd")
+    print(f"对应的英制重量为{pounds:.3f}磅")
 elif unit == "pd":
     kilograms = weight / 2.2046
-    print(f"{weight:.3f} pd = {kilograms:.3f} kg")
+    print(f"对应的公制重量为{kilograms:.3f}公斤")
 else:
     print("输入单位错误，请输入 kg 或 pd")
 
 
 10kg
-对应的英制重量为22.046磅 
+对应的英制重量为22.046pd
 
 10pd 
-对应的公制重量为4.535公斤 
+对应的公制重量为4.535kg
   
   
   
