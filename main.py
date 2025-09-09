@@ -1,4 +1,4 @@
-weight, unit = input("请输入重量和单位(kg/pd): ").split()
+weight, unit = input().split()
 weight = float(weight)
 
 if unit == "kg":
@@ -9,6 +9,7 @@ elif unit == "pd":
     print(f"{weight:.3f} pd = {kilograms:.3f} kg")
 else:
     print("输入单位错误，请输入 kg 或 pd")
+
 示例1：
 10kg
 对应的英制重量为22.046磅 
